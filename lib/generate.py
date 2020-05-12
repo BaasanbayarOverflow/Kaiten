@@ -39,7 +39,7 @@ def generate_windows():
         exit()
 
 def sixty():
-    os.system("x86_86-w64-mingw32-gcc -Wall output/evil.c -o output/evil.exe")
+    os.system("x86_64-w64-mingw32-gcc -Wall output/evil.c -o output/evil.exe")
     os.system("rm output/evil.c")
     print("[\033[95m*\033[0m] Exe deployed at output/")
 
