@@ -24,7 +24,7 @@ Source: https://www.shadowlabs.cc/kaiten
 [![Twitter](https://img.shields.io/twitter/url/https/github.com/shadowlabscc/ProjectOpal.svg?style=popout)](https://twitter.com/intent/tweet?text=Wow:&url=https://github.com/shadowlabscc/Kaiten)
 
 ## Requirements
-- MingW
+- MingW (64 & 32)
 - GCC
 - OSSLSIGNCODE
 
