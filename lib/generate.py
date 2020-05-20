@@ -55,21 +55,21 @@ def generate_windows():
         exit()
 
 def windows_sixty():
-    os.system("x86_64-w64-mingw32-gcc -Wall output/evil.c -o output/evil.exe && x86_64-w64-mingw32-strip output/evil.exe")
+    os.system("x86_64-w64-mingw32-gcc -Wall output/evil.c -o output/evil_x64.exe && x86_64-w64-mingw32-strip output/evil_x64.exe")
     os.system("rm output/evil.c")
     print("[\033[95m*\033[0m] Exe deployed at output/")
 
 def windows_thirty():
-    os.system("i686-w64-mingw32-gcc -Wall output/evil.c -o output/evil.exe && i686-w64-mingw32-strip output/evil.exe")
+    os.system("i686-w64-mingw32-gcc -Wall output/evil.c -o output/evil_x86.exe && i686-w64-mingw32-strip output/evil_x86.exe")
     os.system("rm output/evil.c")
     print("[\033[95m*\033[0m] Exe deployed at output/")
 
 def linux_sixty():
-    os.system("x86_64-linux-gnu-gcc -Wall output/evil.c -o output/evil.bin && x86_64-linux-gnu-strip output/evil.bin")
+    os.system("x86_64-linux-gnu-gcc -Wall output/evil.c -o output/evil_x64.bin && x86_64-linux-gnu-strip output/evil_x64.bin")
     os.system("rm output/evil.c")
     print("[\033[95m*\033[0m] Bin deployed at output/")
 
 def linux_thirty():
-    os.system("i686-linux-gnu-gcc -Wall output/evil.c -o output/evil.bin && i686-linux-gnu-strip output/evil.bin")
+    os.system("i686-linux-gnu-gcc -Wall output/evil.c -o output/evil_x86.bin && i686-linux-gnu-strip output/evil_x86.bin")
     os.system("rm output/evil.c")
     print("[\033[95m*\033[0m] Bin deployed at output/")
