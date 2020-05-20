@@ -38,7 +38,6 @@ def menu():
             choice_os = option[9:]
             if choice_os == "bin":
                 generate.generate_linux()
-                sign.start()
                 menu()
             elif choice_os == "exe":
                 generate.generate_windows()

