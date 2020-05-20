@@ -9,7 +9,7 @@ def start():
     if os.path.exists("output/evil_x64.temp"):
         os.system("rm output/evil_x64.temp")
         start_sixty()
-    if os.path.exists("output/evil_x86.exe"):
+    if os.path.exists("output/evil_x86.temp"):
         os.system("rm output/evil_x86.temp")
         start_thirty()
 
