@@ -39,12 +39,12 @@ def generate_windows():
         exit()
 
 def sixty():
-    os.system("x86_64-w64-mingw32-gcc -Wall output/evil.c -o output/evil.exe")
+    os.system("x86_64-w64-mingw32-gcc -Wall output/evil.c -o output/evil.exe && x86_64-w64-mingw32-strip output/evil.exe")
     os.system("rm output/evil.c")
     print("[\033[95m*\033[0m] Exe deployed at output/")
 
 def firty():
-    os.system("i686-w64-mingw32-gcc -Wall output/evil.c -o output/evil.exe")
+    os.system("i686-w64-mingw32-gcc -Wall output/evil.c -o output/evil.exe && i686-w64-mingw32-strip output/evil.exe")
     os.system("rm output/evil.c")
     print("[\033[95m*\033[0m] Exe deployed at output/")
 
@@ -55,6 +55,6 @@ def linux():
     edit_for_linux = open("output/evil.c", "w")
     edit_for_linux.write(src)
     edit_for_linux.close()
-    os.system("gcc -Wall output/evil.c -o output/evil.bin")
+    os.system("gcc -Wall output/evil.c -o output/evil.bin && strip output/evil.bin")
     os.system("rm output/evil.c")
     print("[\033[95m*\033[0m] Bin deployed at output/")
