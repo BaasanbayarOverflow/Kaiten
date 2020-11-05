@@ -37,7 +37,6 @@ Source: https://www.shadowlabs.cc/kaiten
 
 ## Affected Devices and Operating Systems
 - Windows
-- Android (soon)
 - Mac/Linux
 
 ## Diagrams (also its cool hehe)
